@@ -24,11 +24,11 @@ void loop() {
 
     irState = digitalRead(irPin);
 
-    // TODO 7:
-    // If obstacle detected
-    //     Print "Obstacle Detected"
-    // Else
-    //     Print "No Obstacle"
+    if (irState == LOW) {
+        Serial.println("Obstacle Detected");
+    } else {
+        Serial.println("No Obstacle");
+    }
 
     // TODO 8:
     // Add small delay (200–500ms)
